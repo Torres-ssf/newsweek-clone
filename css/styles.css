@@ -147,3 +147,58 @@ main {
 .sponsored-heading {
   margin-top: 0;
 }
+
+.opnion-list {
+  padding: 0;
+  margin: 0;
+}
+
+.opnion-list-item {
+  border-top: 1px solid #ddd;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.opnion-list li:first-child {
+  border-top: none;
+}
+
+.headshot-image-container {
+  margin-right: 15px;
+  height: 63px;
+  width: 63px;
+}
+
+.headshot-image-container a {
+  height: 100%;
+}
+
+.headshot-image {
+  height: 63px;
+  width: auto;
+}
+
+.opnion-text-container {
+  flex: 1;
+}
+
+.opnion-anchor {
+  color: black;
+  font: bold 17px/21px "Roboto Condensed",sans-serif;
+}
+
+.opnion-author {
+  color: #555;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 21px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.opnion-author a {
+  color: #555;
+}
