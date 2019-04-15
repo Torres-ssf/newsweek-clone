@@ -536,3 +536,43 @@ h5 {
   color: #f72210;
   text-decoration: none;
 }
+
+.most-read-heading {
+  color: #333;
+  display: block;
+  font: bold 16px/16px "Roboto Condensed",sans-serif;
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+
+.most-read-heading:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.most-read-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.most-read-list-item {
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+  padding: 12px 0;
+}
+
+.most-read-img {
+  width: 100px;
+  margin-right: 15px;
+}
+
+.most-read-anchor {
+  color: black;
+  font: bold 17px/21px "Roboto Condensed",sans-serif;
+}
+
+.most-read-anchor:hover {
+  color: #f72210;
+  text-decoration: none;
+}
