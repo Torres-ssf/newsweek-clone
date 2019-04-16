@@ -327,7 +327,8 @@ h5 {
 }
 
 .magazine-section-heading {
-  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 12px;
   display: flex;
   font: bold 19px/19px "Roboto Condensed", sans-serif;
   justify-content: center;
@@ -485,16 +486,16 @@ h5 {
 .picks-list {
   list-style-type: none;
   margin-bottom: 30px;
-  padding: 0;
 }
 
-.picks-list li:nth-child(n + 4) {
+.picks-list li {
   border-top: 1px solid #ddd;
   padding: 10px 0;
 }
 
-.picks-list li:nth-child(3) {
-  padding-bottom: 10px;
+.picks-list li:first-of-type {
+  padding-top: 0;
+  border: none;
 }
 
 .picks-article h4 {
@@ -525,7 +526,7 @@ h5 {
 .picks-article .small-picks h4 {
   font-size: 17px;
   line-height: 21px;
-  margin-top: 0;
+  margin: 0 ;
 }
 
 .picks-article .small-picks h4 a {
@@ -594,6 +595,7 @@ h5 {
 
 .copyright {
   margin-bottom: 10px;
+  color: #666;
 }
 
 .footer-social-list {
@@ -608,7 +610,6 @@ h5 {
   vertical-align: top;
   text-align: center;
   display: block;
-  cursor: pointer;
   margin-right: 15px;
 }
 
@@ -645,7 +646,6 @@ h5 {
 }
 
 .menu-list-item {
-  cursor: pointer;
   display: inline-block;
   padding-right: 20px;
   margin: 6px 0;
@@ -683,7 +683,6 @@ h5 {
   display: inline-block;
   padding-right: 20px;
   margin: 6px 0;
-  cursor: pointer;
 }
 
 .editions-list-item a {
@@ -693,4 +692,171 @@ h5 {
 .editions-list-item a:hover {
   text-decoration: none;
   color: black;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .story-article-img-container,
+  .latest-news-img-container,
+  .mini-picks-img {
+    width: 258px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  body {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  h4 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .top-story {
+    grid-area: top-story;
+    margin-left: 15px;
+  }
+
+  .featured-stories {
+    grid-area: featured-story;
+    margin-right: 15px;
+  }
+
+  .sponsor-insight {
+    grid-area: sponsor-insight;
+  }
+
+  .opnion-section {
+    grid-area: opnion-section;
+  }
+
+  .latest-news-section {
+    grid-area: latest-news-section;
+  }
+
+  .sponsor-insight-2 {
+    grid-area: sponsor-insight-2;
+  }
+
+  .in-the-magazine {
+    grid-area: in-the-magazine;
+  }
+
+  .editor-picks {
+    grid-area: editor-picks;
+  }
+
+  .featured-slideshows {
+    grid-area: featured-slideshows;
+  }
+
+  .picks {
+    grid-area: picks;
+  }
+
+  .most-read-section {
+    grid-area: most-read-section;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "featured-story top-story"
+    "sponsor-insight ."
+    "opnion-section opnion-section"
+    "latest-news-section latest-news-section"
+    "sponsor-insight-2 sponsor-insight-2"
+    "in-the-magazine in-the-magazine"
+    "editor-picks editor-picks"
+    "featured-slideshows featured-slideshows"
+    "picks picks"
+    "most-read-section most-read-section";
+  }
+
+  .month-issue-feature {
+    grid-area: magazine;
+    margin-right: 12px;
+  }
+
+  .magazine-section-heading {
+    grid-area: heading;
+  }
+
+  .magazine-article {
+    margin: 0 12px;
+  }
+
+  .magazine-article:nth-of-type(n + 4) {
+    margin-top: 30px;
+  }
+
+  .magazine-article:nth-of-type(1) {
+    grid-area: mag1;
+  }
+
+  .magazine-article:nth-of-type(2) {
+    grid-area: mag2;
+  }
+
+  .magazine-article:nth-of-type(3) {
+    grid-area: mag3;
+    margin-right: 0;
+  }
+
+  .magazine-article:nth-of-type(4) {
+    margin-left: 0;
+    grid-area: mag4;
+  }
+
+  .magazine-article:nth-of-type(5) {
+    grid-area: mag5;
+  }
+
+  .magazine-article:nth-of-type(6) {
+    grid-area: mag6;
+  }
+
+  .magazine-article:nth-of-type(7) {
+    grid-area: mag7;
+    margin-right: 0;
+  }
+
+  .in-the-magazine {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". heading heading heading"
+    "magazine mag1 mag2 mag3"
+    "mag4 mag5 mag6 mag7";
+  }
+
+  .menu-list-item, .editions-list-item {
+    border-right: 1px solid #d9d9d9;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
+  .menu-list-item:last-of-type, .editions-list-item:last-of-type {
+    border: none;
+  }
+
+  .copyright {
+    font-size: 12px;
+    line-height: 12px;
+  }
 }
