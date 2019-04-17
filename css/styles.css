@@ -197,6 +197,11 @@ h5 {
   margin-right: 15px;
 }
 
+.sticky-conainer {
+  position: sticky;
+  top: 0;
+}
+
 .sponsor-container .top-story-img-container .category {
   color: #3581f4;
 }
@@ -245,7 +250,7 @@ h5 {
 }
 
 .latest-news-section .section-heading {
-  margin-top: 20px;
+  margin-top: 26px;
 }
 
 .headshot-image-container {
@@ -328,7 +333,7 @@ h5 {
 
 .magazine-section-heading {
   border-bottom: 1px solid #d9d9d9;
-  padding-bottom: 12px;
+  padding: 0 0 12px;
   display: flex;
   font: bold 19px/19px "Roboto Condensed", sans-serif;
   justify-content: center;
@@ -630,8 +635,11 @@ h5 {
   color: #3b5998;
 }
 
-.footer-list-container {
+.footer-anchor {
   border-top: 1px solid #d9d9d9;
+}
+
+.footer-list-container {
   color: #666;
   padding-top: 6px;
   font-size: 14px;
@@ -724,125 +732,69 @@ h5 {
     line-height: 20px;
   }
 
+  .related-list-item {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .magazine-container {
+    margin-bottom: 30px;
+  }
+
+  .sticky-more-stories-container {
+    position: sticky;
+    top: 0;
+  }
+
   .top-story {
-    grid-area: top-story;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
     margin-left: 15px;
   }
 
   .featured-stories {
-    grid-area: featured-story;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
     margin-right: 15px;
   }
 
   .sponsor-insight {
-    grid-area: sponsor-insight;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   .opnion-section {
-    grid-area: opnion-section;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
   }
 
   .latest-news-section {
-    grid-area: latest-news-section;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
   }
 
   .sponsor-insight-2 {
-    grid-area: sponsor-insight-2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    max-width: 330px;
+    margin: 30px auto 0;
   }
 
-  .in-the-magazine {
-    grid-area: in-the-magazine;
-  }
-
-  .editor-picks {
-    grid-area: editor-picks;
-  }
-
-  .featured-slideshows {
-    grid-area: featured-slideshows;
-  }
-
-  .picks {
-    grid-area: picks;
-  }
-
-  .most-read-section {
-    grid-area: most-read-section;
-  }
-
-  main {
+  .main-section {
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: auto;
-    grid-template-areas:
-    "featured-story top-story"
-    "sponsor-insight ."
-    "opnion-section opnion-section"
-    "latest-news-section latest-news-section"
-    "sponsor-insight-2 sponsor-insight-2"
-    "in-the-magazine in-the-magazine"
-    "editor-picks editor-picks"
-    "featured-slideshows featured-slideshows"
-    "picks picks"
-    "most-read-section most-read-section";
-  }
-
-  .month-issue-feature {
-    grid-area: magazine;
-    margin-right: 12px;
-  }
-
-  .magazine-section-heading {
-    grid-area: heading;
-  }
-
-  .magazine-article {
-    margin: 0 12px;
-  }
-
-  .magazine-article:nth-of-type(n + 4) {
-    margin-top: 30px;
-  }
-
-  .magazine-article:nth-of-type(1) {
-    grid-area: mag1;
-  }
-
-  .magazine-article:nth-of-type(2) {
-    grid-area: mag2;
-  }
-
-  .magazine-article:nth-of-type(3) {
-    grid-area: mag3;
-    margin-right: 0;
-  }
-
-  .magazine-article:nth-of-type(4) {
-    margin-left: 0;
-    grid-area: mag4;
-  }
-
-  .magazine-article:nth-of-type(5) {
-    grid-area: mag5;
-  }
-
-  .magazine-article:nth-of-type(6) {
-    grid-area: mag6;
-  }
-
-  .magazine-article:nth-of-type(7) {
-    grid-area: mag7;
-    margin-right: 0;
-  }
-
-  .in-the-magazine {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    grid-template-areas:
-    ". heading heading heading"
-    "magazine mag1 mag2 mag3"
-    "mag4 mag5 mag6 mag7";
   }
 
   .menu-list-item, .editions-list-item {
@@ -859,4 +811,77 @@ h5 {
     font-size: 12px;
     line-height: 12px;
   }
+}
+
+@media (min-width: 992px) {
+
+  main {
+    padding: 20px 30px 0;
+  }
+
+  .editions-container {
+    margin-top: 6px;
+  }
+
+  .sticky-opnion-container,
+  .sticky-latest-news-container,
+  .sticky-sponsor-2-container {
+    position: sticky;
+    top: 0;
+  }
+
+  .main-section {
+    grid-template-columns: 29.11% 41.89% 29%;
+    grid-template-rows: auto;
+  }
+
+  .top-story {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .featured-stories {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-right: 15px;
+  }
+
+  .sponsor-insight {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-right: 15px;
+  }
+
+  .opnion-section {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 15px;
+  }
+
+  .latest-news-section {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: 15px;
+  }
+
+  .sponsor-insight-2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-left: 15px;
+  }
+
 }
