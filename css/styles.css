@@ -104,6 +104,10 @@ h5 {
   display: none;
 }
 
+.search-form {
+  display: none;
+}
+
 .section-heading {
   color: rgba(3, 3, 3, .4);
   font-size: 1rem;
@@ -961,6 +965,7 @@ h5 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    flex: 1;
   }
 
   .nav-list-item {
@@ -984,6 +989,25 @@ h5 {
 
   .nav-list-item:first-of-type {
     border-left: none;
+  }
+
+  .search-form {
+    display: initial;
+    flex: 0;
+  }
+
+  .search-form input {
+    color: rgba(0,0,0,.55);
+    background-color: #fff;
+    font-size: 1rem;
+    width: 60px;
+    border: none;
+  }
+
+  .mag-glass {
+    display: inline-block;
+    font-size: 1.3rem;
+    margin-right: 50px;
   }
 
   .signature-anchor {
