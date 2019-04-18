@@ -29,17 +29,22 @@ h5 {
   line-height: 16px;
 }
 
-.navbar {
-  background-color: #f72210;
-  display: flex;
-  flex-wrap: nowrap;
-  height: 40px;
-  padding: 5px 16px;
+.navbar-container {
   width: 100%;
 }
 
+.logo-container {
+  background-color: #f72210;
+  height: 30px;
+  box-sizing: content-box;
+  padding: 5px 16px;
+}
+
+.date-container {
+  display: none;
+}
+
 .anchor-logo {
-  flex: 2;
 }
 
 .logo {
@@ -86,12 +91,17 @@ h5 {
 .bar-anchor {
   color: white;
   font-size: 1rem;
-  flex: 0;
+  height: 26px;
+  line-height: 26px;
   padding-left: 16px;
 }
 
 .bar-anchor:hover {
   color: white;
+}
+
+.navbar {
+  display: none;
 }
 
 .section-heading {
@@ -817,6 +827,100 @@ h5 {
 
   main {
     padding: 20px 30px 0;
+  }
+
+  .logo-container {
+    height: 60px;
+    padding: 20px 10px 15px;
+  }
+
+  .date-container {
+    color: white;
+    display: initial;
+    font: 16px/34px "Roboto Condensed",sans-serif;
+    margin-left: 10px;
+  }
+
+  .logo {
+    width: 396px;
+    height: 60px;
+    margin-left: 50px;
+  }
+
+  .navbar {
+    background-color: #fff;
+    display: block;
+    padding: 15px 15px 15px 0;
+    border-bottom: 2px solid #f4f5f6;
+    width: 100%;
+  }
+
+  .navbar::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    width: 75px;
+    background-color: #f72210;
+    border-left: 12px solid #fff;
+    border-top: 13px solid #f72210;
+  }
+
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list-item {
+    border-left: 1px solid #d9d9d9;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: "Roboto Condensed",sans-serif;
+  }
+
+  .nav-list-item a {
+    color: black;
+  }
+
+  .nav-list-item a:hover {
+    color: #f72210;
+    text-decoration: none;
+  }
+
+  .nav-list-item:first-of-type {
+    border-left: none;
+  }
+
+  .signature-anchor {
+    height: 34px;
+    line-height: 34px;
+  }
+
+  .signature-anchor a {
+    font-size: 18px;
+  }
+
+  .signature-anchor button {
+    font-size: 18px;
+  }
+
+  .signature-anchor button::after {
+    background: url(../assets/icon-arrow-right-red.svg) center/contain no-repeat;
+    fill: #f72210;
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    margin-left: 10px;
+  }
+
+  .bar-anchor {
+    display: none;
   }
 
   .editions-container {
